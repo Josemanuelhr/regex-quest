@@ -9,7 +9,7 @@ BT1. Programación Estructurada y Programación Orientada a Objetos
 Materia: 0485. Programación
 
 ## Soluciones de referencia para cada nivel
-1. '^\\d{5}$
+1. ^\\d{5}$
 2. ^[A-Z]{3}-\\d{4}$
 3. ^(USR|ADM|SYS)-\\d{2}$
 4. ^(?:\\+34)?[6-9]\\d{8}$
