@@ -2,35 +2,44 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regex Quest</title>
-    style.css
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>🧩 Regex Quest</h1>
+    <h1>🧩 Regex Quest</h1>
 
-<div id="game">
-    <h2 id="title"></h2>
+    <div id="game">
 
-    <p id="description"></p>
+        <h2 id="title"></h2>
 
-    <ul id="examples"></ul>
+        <p id="description"></p>
+        <p id="hint"></p>
 
-    <input
-        type="text"
-        id="regexInput"
-        placeholder="Introduce tu regex">
+        <h3>✅ Casos válidos</h3>
+        <ul id="valid"></ul>
 
-    <button onclick="checkAnswer()">
-        Validar
-    </button>
+        <h3>❌ Casos inválidos</h3>
+        <ul id="invalid"></ul>
 
-    <p id="result"></p>
+        <input
+            type="text"
+            id="regexInput"
+            placeholder="Introduce tu regex">
 
-    <h3>XP: <span id="xp">0</span></h3>
-</div>
+        <button onclick="checkAnswer()">
+            Validar Regex
+        </button>
 
-script.jsscript>
+        <p id="feedback"></p>
+
+        <h3>XP: <span id="xp">0</span></h3>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
