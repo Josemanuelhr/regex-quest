@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regex Quest</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101426">
+  <meta name="description" content="Regex Quest: aprende expresiones regulares a través de misiones, conceptos y retos." />
+  <title>Regex Quest — Aprende jugando</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Regex Quest, inicio">
+        <span class="brand-mark">⌘</span>
+        <span>REGEX<span class="brand-accent">QUEST</span></span>
+      </a>
+      <div class="player-stats" aria-label="Misiones completadas">
+        <div class="stat-pill"><span class="stat-icon">✓</span><span id="completedCount">0</span><span>/ <span id="totalLevels">6</span> misiones</span></div>
+      </div>
+    </header>
 
-    <h1>🧩 Regex Quest</h1>
+    <main id="inicio">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Domina el lenguaje<br>de las <span>regex.</span></h1>
+          <p class="hero-subtitle">Aprende a detectar patrones y reconstruir códigos. Explora las misiones en cualquier orden.</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="core-card"><span class="core-symbol">.*</span><span class="core-label">PATTERN<br>RECOGNIZED</span></div>
+          <span class="float-code code-one">\d{5}</span><span class="float-code code-two">[A-Z]+</span><span class="float-code code-three">^ $</span>
+        </div>
+      </section>
 
-    <div id="game">
+      <section class="progress-section" aria-label="Progreso de la aventura">
+        <div class="section-heading"><div><p class="eyebrow">TU RUTA</p><h2>Tu ruta de entrenamiento</h2></div><span class="progress-label" id="progressLabel">0 de 6 completados</span></div>
+        <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+        <div id="levelMap" class="level-map"></div>
+      </section>
 
-        <h2 id="title"></h2>
+      <section id="missionPanel" class="mission-panel" aria-live="polite">
+        <div class="loading-state">Preparando misión…</div>
+      </section>
 
-        <p id="description"></p>
-        <p id="hint"></p>
-
-        <h3>✅ Casos válidos</h3>
-        <ul id="valid"></ul>
-
-        <h3>❌ Casos inválidos</h3>
-        <ul id="invalid"></ul>
-
-        <input
-            type="text"
-            id="regexInput"
-            placeholder="Introduce tu regex">
-
-        <button onclick="checkAnswer()">
-            Validar Regex
-        </button>
-
-        <p id="feedback"></p>
-
-        <h3>XP: <span id="xp">0</span></h3>
-
-    </div>
-
-    <script src="script.js"></script>
-
+      <footer class="footer"><span>23300018 PROGRAMACIÓN Y BASES DE DATOS</span><span>JOSÉ MANUEL HIDALGO ROGEL</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
